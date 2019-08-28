@@ -1,68 +1,68 @@
-0 1 2 3 4 5 6 7 8 X X X 2 3 4 5 6 7 X X X 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 
- 0 1 2 3 4 5 6 7 X X X X 2 3 4 5 6 X X X X 1 2 3 4 5 6 7 8 9 X X 2 3 4 5 6 7 8 9 
-0 1 2 3 4 5 6 7 8 X X X 2 3 4 5 6 X X X X 1 X X 4 5 X X 8 9 X X X 3 X X 6 7 8 9 
- 0 1 2 3 4 5 6 7 8 X X X 2 3 X 5 X X X X X X X X 4 X X X 8 X X X 2 X X X 6 7 8 9 
-0 1 2 3 4 5 6 7 X X X X X 3 X X 6 X X X X X X X X 5 X X X 9 X X 2 3 X X 6 7 8 9 
- 0 1 2 3 4 5 6 X X X X X X X X X X X X X X X X X 4 5 X X X 9 0 1 2 3 4 5 6 7 8 9 
-0 1 2 3 4 5 6 X X X X X X X X X X X X X X X X X 4 5 6 X X X 0 1 X X 4 5 6 7 8 9 
- 0 1 2 3 4 5 X X X X X X X X X X X X X X X X X 3 4 5 6 X 8 9 0 X X X 4 5 6 7 8 9 
-0 1 2 3 4 5 6 X X X X X X X X X X X X X X X X X 4 5 6 7 8 9 0 1 X X 4 5 6 7 8 9 
- 0 1 2 3 4 5 6 X X X X X X X X X X X X X X X X 3 4 X X 7 8 9 0 1 2 3 4 5 6 7 8 9 
-0 1 2 3 4 5 6 X X X X X X X X X X X X X X X X X 4 X X X 8 9 0 1 2 3 4 5 6 7 8 9 
- 0 1 2 3 4 5 6 X X X X X X X X X X X X X X X X X 4 X X 7 8 9 X X 2 3 4 5 6 7 8 9 
-0 1 2 3 X X X X X X X X X X X X X X X X X X X X X 5 6 7 8 9 X X X 3 4 5 6 7 8 9 
- 0 1 2 X X X X X X X X X X X X X X X X X X X X X X 5 6 7 8 X X X X 3 4 5 6 7 8 9 
-0 1 2 3 X X X X X X X X X X X X X X X X X X X X X X 6 7 8 9 X X X 3 4 5 6 7 8 9 
- 0 1 2 3 X X X 7 X X X X X X X X X X X X X X X X X X 6 7 8 X X X 2 3 4 5 6 7 8 9 
-0 1 2 3 4 X X 7 8 X X X X X X X X X X X X X X X X X X 7 8 X X X 2 3 4 5 6 7 8 9 
- 0 1 2 3 4 5 6 7 8 X X X X X X X X X X X X X X X X X 6 7 8 X X 1 2 3 4 5 6 7 8 9 
-0 1 2 3 4 5 6 7 8 9 X X X X X X X X X X X X X X X X X X X X X 1 2 3 4 5 6 7 8 9 
- 0 1 2 3 4 5 6 7 8 X X X X X X X X X X X X X X X X X X X X X 0 1 2 3 4 5 6 7 8 9 
-0 1 2 X X X X 7 8 X X X X X X X X X X X X X X X X X X X X X X X X 3 4 5 6 7 8 9 
- 0 1 X X X X X 7 X X X X X X X X X X X X X X X X X X X X X X X X X 3 4 5 6 7 8 9 
-0 1 X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X 3 4 5 6 7 8 9 
- 0 X X X X X X X X X X X X X X X X X X X X X X X X X X X X X 0 1 2 3 4 5 6 7 8 9 
-0 X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X 1 2 3 4 5 6 7 8 9 
- 0 X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X 3 4 5 6 7 8 9 
-0 X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X 4 5 6 7 8 9 
- X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X 3 4 5 6 7 8 9 
-X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X 3 4 5 6 7 8 9 
- X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X 2 3 4 5 6 7 8 9 
-0 X X X X X X X 8 9 0 1 2 3 4 5 X X X X X X X X X 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 
- X X X X X X X 7 8 9 0 1 2 3 4 5 X X X 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 
-X X X X X X X 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 
- X X X X X X X 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 X X 9 0 1 2 3 4 5 6 7 8 9 
-X X X X X X X 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 X X X X 1 2 3 4 5 X X X X X X X X 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 
- X X X X X X 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 X X X X X 1 2 3 4 X X X X X X X X X 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 
-X X X X 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 X X X X X 2 3 4 X X X X X X X X X X 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 
- X X X 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 X X X X X X X X X X X 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 
-0 X X X 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 X X X X X X X X X X X X X X X X X X X 7 8 9 0 1 2 3 4 5 6 7 8 9 
- 0 X X X 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 X X X X X X X X X X X X X X X X X X X 7 8 9 0 1 2 3 4 5 6 7 8 9 
-0 1 X X X X 6 7 8 9 0 1 2 3 4 5 6 7 X X 0 1 2 3 X X X 7 X X X X X X X X X X X X X X X X X X X X 8 9 0 1 2 3 4 5 6 7 8 9 
- 0 1 X X X X 6 7 8 9 0 1 2 3 4 5 6 X X X 0 1 X X X X X X X X X X X X X X X X X X X X X X X X X 7 8 9 0 1 2 3 4 5 6 7 8 9 
-0 1 2 X X X X 7 8 9 0 1 2 3 4 5 6 X X X X 1 X X X X X X X X X X X X X X X X X X X X X X X 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 
- 0 1 2 X X X 6 7 8 9 0 1 2 3 4 5 X X X X X X X X X X X X X X X X X X X X X X X X X X X X 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 
-0 X X 3 4 5 6 7 8 9 0 1 2 3 4 5 X X X X X X X X X X X X X X X X X X X X X X X X X X X X X 5 6 7 8 X 0 1 2 3 4 5 6 7 8 9 
- X X X 3 4 5 6 7 8 9 0 1 2 3 4 5 X X X X X X X X X X X X X X X X X X X X X X X X X X X X 4 5 6 7 X X 0 1 2 3 4 5 6 7 8 9 
-X X X 3 4 5 6 7 8 9 0 1 2 3 4 5 6 X X X X X X X X X X X X X X X X X X X X X X X X X X X X 5 6 7 X X X 1 2 3 4 5 6 7 8 9 
- X X 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 X X X X X X X X X X X X X X X X X X X X X X X X X X X X 5 6 7 X X 0 1 2 3 4 5 6 7 8 9 
-0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 X X X X X X X X X X X X X X X X X X X X X X X X X X 6 7 X X 0 1 2 3 4 5 6 7 8 9 
- 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 X X X X X X X X X X X X X X X X X X X X X X X X X X X X X 9 0 1 2 3 4 5 6 7 8 9 
-0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 X X 0 X X X X X X X X X X X X X X X X X X X X X X X X X X X X X 0 1 2 3 4 5 6 7 8 9 
- 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 X X X 0 X X X X X X X X X X X X X X X X X X X X X X X X X X X X X 0 1 2 3 4 5 6 7 8 9 
-0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 X X 7 X X X 1 X X X X X X X X X X X X X X X X X X X X X X X X X X X X X 1 2 3 4 5 6 7 8 9 
- 0 1 2 3 4 5 6 7 8 9 0 1 2 3 X X X 7 X X 0 X X X X X X X X X X X X X X X X X X X X X X X X X X X X X 0 1 2 3 4 5 6 7 8 9 
-0 1 2 3 4 5 6 7 8 9 0 1 2 3 X X X 7 8 9 0 X X X X X X X X X X X X X X X X X X X X X X X X X X X X 9 0 1 2 3 4 5 6 7 8 9 
- 0 1 2 3 4 5 6 7 8 9 0 1 2 X X X X 7 X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X 9 0 1 2 3 4 5 6 7 8 9 
-0 1 2 3 4 5 6 7 8 9 0 1 2 3 X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X 0 1 2 3 4 5 6 7 8 9 
- 0 1 2 3 4 5 6 7 8 9 0 1 2 3 X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X 0 1 2 3 4 5 6 7 8 9 
-0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X 1 2 3 4 5 6 7 8 9 
- 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X 1 2 3 4 5 6 7 8 9 
-0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 X X X X X X X X X X X X X X X X X X X X X X X X X X X 1 2 3 4 5 6 7 8 9 
- 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 X X X X X X 9 X X X X X X X X X X X X X X X X X X X X 0 1 2 3 4 5 6 7 8 9 
-0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 X X X X X 9 0 X X X X X X X X X X X X X X X X X X 9 0 1 2 3 4 5 6 7 8 9 
- 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 X X X X X X 9 0 1 2 3 4 5 6 7 8 9 
-0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 X X X X X X 0 1 2 3 4 5 6 7 8 9 
+0 1 2 3 4 5 6 7 8 N N N 2 3 4 5 6 7 N N N 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 
+ 0 1 2 3 4 5 6 7 N N N N 2 3 4 5 6 N N N N 1 2 3 4 5 6 7 8 9 N N 2 3 4 5 6 7 8 9 
+0 1 2 3 4 5 6 7 8 N N N 2 3 4 5 6 N N N N 1 N N 4 5 N N 8 9 N N N 3 N N 6 7 8 9 
+ 0 1 2 3 4 5 6 7 8 N N N 2 3 N 5 N N N N N N N N 4 N N N 8 N N N 2 N N N 6 7 8 9 
+0 1 2 3 4 5 6 7 N N N N N 3 N N 6 N N N N N N N N 5 N N N 9 N N 2 3 N N 6 7 8 9 
+ 0 1 2 3 4 5 6 N N N N N N N N N N N N N N N N N 4 5 N N N 9 0 1 2 3 4 5 6 7 8 9 
+0 1 2 3 4 5 6 N N N N N N N N N N N N N N N N N 4 5 6 N N N 0 1 N N 4 5 6 7 8 9 
+ 0 1 2 3 4 5 N N N N N N N N N N N N N N N N N 3 4 5 6 N 8 9 0 N N N 4 5 6 7 8 9 
+0 1 2 3 4 5 6 N N N N N N N N N N N N N N N N N 4 5 6 7 8 9 0 1 N N 4 5 6 7 8 9 
+ 0 1 2 3 4 5 6 N N N N N N N N N N N N N N N N 3 4 N N 7 8 9 0 1 2 3 4 5 6 7 8 9 
+0 1 2 3 4 5 6 N N N N N N N N N N N N N N N N N 4 N N N 8 9 0 1 2 3 4 5 6 7 8 9 
+ 0 1 2 3 4 5 6 N N N N N N N N N N N N N N N N N 4 N N 7 8 9 N N 2 3 4 5 6 7 8 9 
+0 1 2 3 N N N N N N N N N N N N N N N N N N N N N 5 6 7 8 9 N N N 3 4 5 6 7 8 9 
+ 0 1 2 N N N N N N N N N N N N N N N N N N N N N N 5 6 7 8 N N N N 3 4 5 6 7 8 9 
+0 1 2 3 N N N N N N N N N N N N N N N N N N N N N N 6 7 8 9 N N N 3 4 5 6 7 8 9 
+ 0 1 2 3 N N N 7 N N N N N N N N N N N N N N N N N N 6 7 8 N N N 2 3 4 5 6 7 8 9 
+0 1 2 3 4 N N 7 8 N N N N N N N N N N N N N N N N N N 7 8 N N N 2 3 4 5 6 7 8 9 
+ 0 1 2 3 4 5 6 7 8 N N N N N N N N N N N N N N N N N 6 7 8 N N 1 2 3 4 5 6 7 8 9 
+0 1 2 3 4 5 6 7 8 9 N N N N N N N N N N N N N N N N N N N N N 1 2 3 4 5 6 7 8 9 
+ 0 1 2 3 4 5 6 7 8 N N N N N N N N N N N N N N N N N N N N N 0 1 2 3 4 5 6 7 8 9 
+0 1 2 N N N N 7 8 N N N N N N N N N N N N N N N N N N N N N N N N 3 4 5 6 7 8 9 
+ 0 1 N N N N N 7 N N N N N N N N N N N N N N N N N N N N N N N N N 3 4 5 6 7 8 9 
+0 1 N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N 3 4 5 6 7 8 9 
+ 0 N N N N N N N N N N N N N N N N N N N N N N N N N N N N N 0 1 2 3 4 5 6 7 8 9 
+0 N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N 1 2 3 4 5 6 7 8 9 
+ 0 N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N 3 4 5 6 7 8 9 
+0 N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N 4 5 6 7 8 9 
+ N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N 3 4 5 6 7 8 9 
+N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N 3 4 5 6 7 8 9 
+ N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N 2 3 4 5 6 7 8 9 
+0 N N N N N N N 8 9 0 1 2 3 4 5 N N N N N N N N N 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 
+ N N N N N N N 7 8 9 0 1 2 3 4 5 N N N 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 
+N N N N N N N 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 
+ N N N N N N N 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 S S 9 0 1 2 3 4 5 6 7 8 9 
+N N N N N N N 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 S S S S 1 2 3 4 5 S S S S S S S S 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 
+ N N N N N N 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 S S S S S 1 2 3 4 S S S S S S S S S 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 
+N N N N 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 S S S S S 2 3 4 S S S S S S S S S S 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 
+ N N N 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 S S S S S S S S S S S 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 
+0 N N N 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 S S S S S S S S S S S S S S S S S S S 7 8 9 0 1 2 3 4 5 6 7 8 9 
+ 0 N N N 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 S S S S S S S S S S S S S S S S S S S 7 8 9 0 1 2 3 4 5 6 7 8 9 
+0 1 N N N N 6 7 8 9 0 1 2 3 4 5 6 7 S S 0 1 2 3 S S S 7 S S S S S S S S S S S S S S S S S S S S 8 9 0 1 2 3 4 5 6 7 8 9 
+ 0 1 N N N N 6 7 8 9 0 1 2 3 4 5 6 S S S 0 1 S S S S S S S S S S S S S S S S S S S S S S S S S 7 8 9 0 1 2 3 4 5 6 7 8 9 
+0 1 2 N N N N 7 8 9 0 1 2 3 4 5 6 S S S S 1 S S S S S S S S S S S S S S S S S S S S S S S 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 
+ 0 1 2 N N N 6 7 8 9 0 1 2 3 4 5 S S S S S S S S S S S S S S S S S S S S S S S S S S S S 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 
+0 N N 3 4 5 6 7 8 9 0 1 2 3 4 5 S S S S S S S S S S S S S S S S S S S S S S S S S S S S S 5 6 7 8 S 0 1 2 3 4 5 6 7 8 9 
+ N N N 3 4 5 6 7 8 9 0 1 2 3 4 5 S S S S S S S S S S S S S S S S S S S S S S S S S S S S 4 5 6 7 S S 0 1 2 3 4 5 6 7 8 9 
+N N N 3 4 5 6 7 8 9 0 1 2 3 4 5 6 S S S S S S S S S S S S S S S S S S S S S S S S S S S S 5 6 7 S S S 1 2 3 4 5 6 7 8 9 
+ N N 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 S S S S S S S S S S S S S S S S S S S S S S S S S S S S 5 6 7 S S 0 1 2 3 4 5 6 7 8 9 
+0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 S S S S S S S S S S S S S S S S S S S S S S S S S S 6 7 S S 0 1 2 3 4 5 6 7 8 9 
+ 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 S S S S S S S S S S S S S S S S S S S S S S S S S S S S S 9 0 1 2 3 4 5 6 7 8 9 
+0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 S S 0 S S S S S S S S S S S S S S S S S S S S S S S S S S S S S 0 1 2 3 4 5 6 7 8 9 
+ 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 S S S 0 S S S S S S S S S S S S S S S S S S S S S S S S S S S S S 0 1 2 3 4 5 6 7 8 9 
+0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 S S 7 S S S 1 S S S S S S S S S S S S S S S S S S S S S S S S S S S S S 1 2 3 4 5 6 7 8 9 
+ 0 1 2 3 4 5 6 7 8 9 0 1 2 3 S S S 7 S S 0 S S S S S S S S S S S S S S S S S S S S S S S S S S S S S 0 1 2 3 4 5 6 7 8 9 
+0 1 2 3 4 5 6 7 8 9 0 1 2 3 S S S 7 8 9 0 S S S S S S S S S S S S S S S S S S S S S S S S S S S S 9 0 1 2 3 4 5 6 7 8 9 
+ 0 1 2 3 4 5 6 7 8 9 0 1 2 S S S S 7 S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S 9 0 1 2 3 4 5 6 7 8 9 
+0 1 2 3 4 5 6 7 8 9 0 1 2 3 S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S 0 1 2 3 4 5 6 7 8 9 
+ 0 1 2 3 4 5 6 7 8 9 0 1 2 3 S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S 0 1 2 3 4 5 6 7 8 9 
+0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S 1 2 3 4 5 6 7 8 9 
+ 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S 1 2 3 4 5 6 7 8 9 
+0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 S S S S S S S S S S S S S S S S S S S S S S S S S S S 1 2 3 4 5 6 7 8 9 
+ 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 S S S S S S 9 S S S S S S S S S S S S S S S S S S S S 0 1 2 3 4 5 6 7 8 9 
+0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 S S S S S 9 0 S S S S S S S S S S S S S S S S S S 9 0 1 2 3 4 5 6 7 8 9 
+ 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 S S S S S S 9 0 1 2 3 4 5 6 7 8 9 
+0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 S S S S S S 0 1 2 3 4 5 6 7 8 9 
  0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 
 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 
 

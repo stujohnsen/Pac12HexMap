@@ -1,23 +1,37 @@
 import time
+# from tables import *
+
+# # neighboring indices are numerated clockwise from 12 o clock position
+# class HexTile:
+#     index       = Int16Col()
+#     x_coord     = Float16Col()
+#     y_coord     = Float16Col()
+#     control     = StringCol()
+#     n_top       = Int16Col()
+#     n_top_right = Int16Col()
+#     n_bot_right = Int16Col()
+#     n_bot       = Int16Col()
+#     n_bot_left  = Int16Col()
+#     n_top_left  = Int16Col()
 
 if __name__ == "__main__":
     inCoordFile = open("coordmap", "r")
-    coordList = list()
-    index = 0
+    coordsDict = dict(list())
     y = 0
     maxX = 0
+    characterGroups = list()
     for line in inCoordFile:
         x=0
-        for loc in line:
-            if(loc == 'x' or loc == 'X'):
-                coordList.append((x,y,index))
-                x += 1
-                index += 1
-            elif (loc != ' '):
-                x += 1
-            elif (loc == ' '):
+        for character in line:
+            if(character == ' '):
                 continue
-            
+            if(character.isalpha()):
+                if(character not in characterGroups):
+                    coordsDict[character] = list()
+                    characterGroups.append(character)
+                coordsDict[character].append((x, y))
+            x += 1
+
         if x > maxX: maxX = x
         y += 1
 
@@ -27,47 +41,55 @@ if __name__ == "__main__":
     minY = 0
     maxY = y
 
-    for coord in coordList:
-        coordX = coord[0] * 43.3
-        coordY = coord[1] * 37.5
-        index  = coord[2]
+    # databaseFile = open_file("reference.hd5", mode='w', title="HexMapDatabase")
+    # group = databaseFile.create_group("/", 'map', 'map data helper')
+    # dbTable = databaseFile.create_table(group, 'HexTileInfo', HexTile, "Hex Tile info")
+    for key, coordList in sorted(coordsDict.items()):
 
-        if((coord[1] % 2) == 1):
-            coordX += 21.65
+        hexString = '<g id="' + key + '">\n'
 
-        if minX > (coordX - 21.65):
-            minX = (coordX - 21.65)
-            round(minX, 3)
-        if maxX < (coordX + 21.65):
-            maxX = (coordX + 21.65)
-            round(maxX, 3)
-        if minY > (coordY - 25):
-            minY = (coordY - 25)
-            round(minY, 3)
-        if maxY < (coordY + 25):
-            maxY = (coordY + 25)
-            round(maxY, 3)  
+        for coord in coordList:
 
-        pointA = (round(coordX       , 3), round(coordY - 25, 3))
-        pointB = (round(coordX + 21.65, 3), round(coordY - 12.5, 3))
-        pointC = (round(coordX + 21.65, 3), round(coordY + 12.5, 3))
-        pointD = (round(coordX       , 3), round(coordY + 25, 3))
-        pointE = (round(coordX - 21.65, 3), round(coordY + 12.5, 3))
-        pointF = (round(coordX - 21.65, 3), round(coordY - 12.5, 3))
+            coordX = coord[0] * 43.3
+            coordY = coord[1] * 37.5
 
-        hexString = \
-            '<polygon control="base" ' + \
-            'row="' + repr(coord[1]) +'" col="' + repr(coord[0]) + '" ' +\
-            'XCoord="' + repr(round(coordX, 3)) + '" YCoord="' + repr(round(coordY, 3)) + '" index="' + repr(index) + '" ' +\
-            'points="' + \
-            repr(pointA[0]) + ',' + repr(pointA[1]) + ' ' + \
-            repr(pointB[0]) + ',' + repr(pointB[1]) + ' ' + \
-            repr(pointC[0]) + ',' + repr(pointC[1]) + ' ' + \
-            repr(pointD[0]) + ',' + repr(pointD[1]) + ' ' + \
-            repr(pointE[0]) + ',' + repr(pointE[1]) + ' ' + \
-            repr(pointF[0]) + ',' + repr(pointF[1]) + ' ' + \
-            '"></polygon>'
+            if((coord[1] % 2) == 1):
+                coordX += 21.65
 
+            if minX > (coordX - 21.65):
+                minX = (coordX - 21.65)
+                round(minX, 3)
+            if maxX < (coordX + 21.65):
+                maxX = (coordX + 21.65)
+                round(maxX, 3)
+            if minY > (coordY - 25):
+                minY = (coordY - 25)
+                round(minY, 3)
+            if maxY < (coordY + 25):
+                maxY = (coordY + 25)
+                round(maxY, 3)  
+
+            pointA = (round(coordX        , 3), round(coordY - 25  , 3))
+            pointB = (round(coordX + 21.65, 3), round(coordY - 12.5, 3))
+            pointC = (round(coordX + 21.65, 3), round(coordY + 12.5, 3))
+            pointD = (round(coordX        , 3), round(coordY + 25  , 3))
+            pointE = (round(coordX - 21.65, 3), round(coordY + 12.5, 3))
+            pointF = (round(coordX - 21.65, 3), round(coordY - 12.5, 3))
+
+            hexString += \
+                '\t\t<polygon control="base" ' + \
+                'row="' + repr(coord[1]) +'" col="' + repr(coord[0]) + '" ' +\
+                'XCoord="' + repr(round(coordX, 3)) + '" YCoord="' + repr(round(coordY, 3)) + '" ' +\
+                'points="' + \
+                repr(pointA[0]) + ',' + repr(pointA[1]) + ' ' + \
+                repr(pointB[0]) + ',' + repr(pointB[1]) + ' ' + \
+                repr(pointC[0]) + ',' + repr(pointC[1]) + ' ' + \
+                repr(pointD[0]) + ',' + repr(pointD[1]) + ' ' + \
+                repr(pointE[0]) + ',' + repr(pointE[1]) + ' ' + \
+                repr(pointF[0]) + ',' + repr(pointF[1]) + ' ' + \
+                '"></polygon>\n'
+
+        hexString += '\t</g>'
         hexGrid.append(hexString)
 
     strokeWidth = 5
@@ -110,7 +132,7 @@ if __name__ == "__main__":
             '\t\t\tpolygon[control="WashingtonBorder"] {fill:#E8D3A2}\n' + \
             '\t\t\tpolygon[control="WSU"]              {fill:#981E32}\n' + \
             '\t\t\tpolygon[control="WSUBorder"]        {fill:#53565A}\n' + \
-            '\t</style>\n' + \
+            '\t\t</style>\n' + \
         '\t</defs>\n'
 
     for hex in hexGrid:
