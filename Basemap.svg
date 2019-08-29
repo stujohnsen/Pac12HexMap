@@ -28,7 +28,7 @@
 			polygon[control="WashingtonBorder"] {fill:#E8D3A2}
 			polygon[control="WSU"]              {fill:#981E32}
 			polygon[control="WSUBorder"]        {fill:#53565A}
-	    </style>
+		</style>
 	</defs>
 	<g id="North">
 		<polygon control="base" row="0" col="9" XCoord="389.7" YCoord="0.0" points="389.7,-25.0 411.35,-12.5 411.35,12.5 389.7,25.0 368.05,12.5 368.05,-12.5 "></polygon>
