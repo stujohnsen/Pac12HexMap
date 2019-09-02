@@ -1,12 +1,16 @@
-import time, json
+import time, json, random
 from fractions import Fraction
 from collections import defaultdict
+
 # import cairosvg
 import xml.etree.ElementTree as ET
 
-class coord:
-    row = int()
-    col = int()
+base_control = 'base'
+
+class Coord:
+    def __init__(self, row, col):
+        self.row = row
+        self.col = col
 
     def __init__(self, row, col):
         self.row = row
@@ -21,67 +25,109 @@ class coord:
     def __hash__(self):
         return hash((self.row, self.col))
 
-class neighbors:
-    top_left     = coord(None, None)
-    top_right    = coord(None, None)
-    right        = coord(None, None)
-    bottom_right = coord(None, None)
-    bottom_left  = coord(None, None)
-    left         = coord(None, None)
+class Tile:
+    coord = Coord(None, None)
+    control = None
+    neighbors = None
 
-def SetNeighborTile(controlDict, tile, teamToSet):
-    if tile.
+    def __init__(self, row, col, control=None, neighbors=None):
+        self.coord = Coord(row, col)
+        self.control = control
+        self.neighbors = Neighbors()
 
-    if any neighbor to input tile belongs to other team or any neighbor to input file not in controlDict
-        set tile control color to team border
-    else
-        set tile control color to team
-    
-def UpdateTeamNeighborSet(inControlDict, team):
-    startingSet = filter inControlDict by team as set
-    neighborsSet = GetAllUnsetNeighbors(startingSet)
-    if neighborsSet is empty:
-        return GetAllUnsetNeighbors(neighborsSet)
+    def __eq__(self, other):
+        if isinstance(other, self.__class__):
+            return (self.coord == other.coord)
+        else:
+            return False
+
+    def __hash__(self):
+        return hash((self.row, self.col, self.control))
+
+class Neighbors:
+    top_left     = Coord(None, None)
+    top_right    = Coord(None, None)
+    right        = Coord(None, None)
+    bottom_right = Coord(None, None)
+    bottom_left  = Coord(None, None)
+    left         = Coord(None, None)
+
+    def __init__(self):
+        self.top_left     = Coord(None, None)
+        self.top_right    = Coord(None, None)
+        self.right        = Coord(None, None)
+        self.bottom_right = Coord(None, None)
+        self.bottom_left  = Coord(None, None)
+        self.left         = Coord(None, None)
+
+
+def SetNeighborTile(inControlDict, inTile, inTeamToSet):
+    if (
+        ((inTile.neighbors.top_left     in inControlDict.keys()) and (inControlDict[inTile.neighbors.top_left]     != base_control)) or
+        ((inTile.neighbors.top_right    in inControlDict.keys()) and (inControlDict[inTile.neighbors.top_right]    != base_control)) or
+        ((inTile.neighbors.right        in inControlDict.keys()) and (inControlDict[inTile.neighbors.right]        != base_control)) or
+        ((inTile.neighbors.bottom_right in inControlDict.keys()) and (inControlDict[inTile.neighbors.bottom_right] != base_control)) or
+        ((inTile.neighbors.bottom_left  in inControlDict.keys()) and (inControlDict[inTile.neighbors.bottom_left]  != base_control)) or
+        ((inTile.neighbors.left         in inControlDict.keys()) and (inControlDict[inTile.neighbors.left]         != base_control)) 
+    ):
+        inTile.control = inTeamToSet
+    else:
+        inTile.control = (inTeamToSet + 'Border')
+
+
+def GetAllUnsetNeighbors(inSetToExpand, inControlDict):
+    neighborsSet = set();
+
+    for tile in inSetToExpand:
+        if ((tile.neighbors.top_left     in inControlDict) and (inControlDict[tile.neighbors.top_left    ] == base_control)): neighborsSet.add(tile.neighbors.top_left    )
+        if ((tile.neighbors.top_right    in inControlDict) and (inControlDict[tile.neighbors.top_right   ] == base_control)): neighborsSet.add(tile.neighbors.top_right   )
+        if ((tile.neighbors.right        in inControlDict) and (inControlDict[tile.neighbors.right       ] == base_control)): neighborsSet.add(tile.neighbors.right       )
+        if ((tile.neighbors.bottom_right in inControlDict) and (inControlDict[tile.neighbors.bottom_right] == base_control)): neighborsSet.add(tile.neighbors.bottom_right)
+        if ((tile.neighbors.bottom_left  in inControlDict) and (inControlDict[tile.neighbors.bottom_left ] == base_control)): neighborsSet.add(tile.neighbors.bottom_left )
+        if ((tile.neighbors.left         in inControlDict) and (inControlDict[tile.neighbors.left        ] == base_control)): neighborsSet.add(tile.neighbors.left        )
+
+    return neighborsSet
+
+def UpdateTeamNeighborSet(inControlDict, inTeam):
+    startingSet = set(filter(lambda x: x.values() == inTeam, inControlDict))
+    neighborsSet = GetAllUnsetNeighbors(startingSet, inControlDict)
+    if (len(neighborsSet) == 0):
+        return GetAllUnsetNeighbors(neighborsSet, inControlDict)
     else:
         return neighborsSet
 
-def GetAllUnsetNeighbors(inSetToExpand):
-    return unset neighbors of inSetToExpand as set
 
-def SelectTileFromSet(teamNeighborSet):
-    while len(teamNeighborSet) > 0:
-        selectedTile = select random tile from teamNeighborSet
-        remove selectedTile from teamNeighborSet
-        if selectedTile is unset
-            return selected tile
+def SelectTileFromSet(inTeamNeighborSet):
+    while len(inTeamNeighborSet) > 0:
+        selectedTile = random.choice(inTeamNeighborSet)
+        inTeamNeighborSet.remove(selectedTile)
+        if selectedTile.control == base_control:
+            return selectedTile
     return None
 
-def BuildMapForGroup(inTileGroupControlDict, inTileGroupNeighborsDict, inTeamWeights):
-    lTotalUnallocatedTiles = len(inTileGroupControlDict)
+def BuildMapForGroup(inTileGroupDict, inTeamWeights):
+    lTotalUnallocatedTiles = len(inTileGroupDict.values())
 
     lRemainingTeamTiles = dict()
     for team, weight in inTeamWeights.keys():
-        lRemainingTeamTiles[team] = int(lTotalTiles * weight)
+        lRemainingTeamTiles[team] = int(lTotalUnallocatedTiles * weight)
 
     while(lTotalUnallocatedTiles > 0):
         for team, teamTilesToAllocate in lRemainingTeamTiles:
-            if(teamTilesToAllocate <= 0 or lTotalUnallocatedTiles <= 0)
+            if((teamTilesToAllocate <= 0) or (lTotalUnallocatedTiles <= 0)):
                 continue
             while True:
-                if len(teamNeighborSet) <= 0
-                    teamNeighborSet = UpdateTeamNeighborSet(inTileGroupControlDict, team)
-                lTile = SelectTileFromSet(teamNeighborSet)
-                if lTile = None
+                if(len(teamNeighborSet) <= 0):
+                    teamNeighborSet = UpdateTeamNeighborSet(inTileGroupDict, team)
+                tile = SelectTileFromSet(teamNeighborSet)
+                if(tile == None):
                     continue
-                SetNeighborTile(controlDict, tile, teamToSet)
+                SetNeighborTile(inTileGroupDict, tile, team)
                 break
 
             teamTilesToAllocate -= 1
             lTotalUnallocatedTiles -= 1
             
-
-
-
     return
 
 
@@ -101,7 +147,7 @@ if __name__ == "__main__":
     lNorthTeamsStartCoords = dict()
     lNorthTeamWeights = dict()
     for key, value in lNorthTeamsInfoDict:
-        lNorthTeamsStartCoords[key] = coord(value['row'], value['col'])
+        lNorthTeamsStartCoords[key] = Coord(value['row'], value['col'])
         weight = value['weight']
         if '/' in weight:
             fraction = Fraction(weight)
@@ -112,44 +158,40 @@ if __name__ == "__main__":
     
     NorthGroup = tree.findall(".//{http://www.w3.org/2000/svg}g[@id='North']//")
 
-    # northTileList = list()
-    lNorthTileNeighborsDict = defaultdict(coord)
-    lNorthTileControlDict = defaultdict(coord)
+    lNorthTiles = {}
+    # lNorthTileControlDict = defaultdict(coord)
 
-    for tile in NorthGroup:
-        row = int(tile.attrib.get('row'))
-        col = int(tile.attrib.get('col'))
-        tileCoord = coord(row, col)
-        tileNeighbors = neighbors()
+    for SVGTile in NorthGroup:
+        row = int(SVGTile.attrib.get('row'))
+        col = int(SVGTile.attrib.get('col'))
+        tile = Tile(row, col)
         
         if(row % 2 == 0):
-            tileNeighbors.top_left     = coord(row - 1, col - 1)
-            tileNeighbors.top_right    = coord(row - 1, col    )
-            tileNeighbors.right        = coord(row    , col + 1)
-            tileNeighbors.bottom_right = coord(row + 1, col    )
-            tileNeighbors.bottom_left  = coord(row + 1, col - 1)
-            tileNeighbors.left         = coord(row    , col - 1)
+            tile.neighbors.top_left     = Coord(row - 1, col - 1)
+            tile.neighbors.top_right    = Coord(row - 1, col    )
+            tile.neighbors.right        = Coord(row    , col + 1)
+            tile.neighbors.bottom_right = Coord(row + 1, col    )
+            tile.neighbors.bottom_left  = Coord(row + 1, col - 1)
+            tile.neighbors.left         = Coord(row    , col - 1)
         else:
-            tileNeighbors.top_left     = coord(row - 1, col    )
-            tileNeighbors.top_right    = coord(row - 1, col + 1)
-            tileNeighbors.right        = coord(row    , col + 1)
-            tileNeighbors.bottom_right = coord(row + 1, col + 1)
-            tileNeighbors.bottom_left  = coord(row + 1, col    )
-            tileNeighbors.left         = coord(row    , col - 1)
+            tile.neighbors.top_left     = Coord(row - 1, col    )
+            tile.neighbors.top_right    = Coord(row - 1, col + 1)
+            tile.neighbors.right        = Coord(row    , col + 1)
+            tile.neighbors.bottom_right = Coord(row + 1, col + 1)
+            tile.neighbors.bottom_left  = Coord(row + 1, col    )
+            tile.neighbors.left         = Coord(row    , col - 1)
 
-        lNorthTileNeighborsDict[tileCoord] = tileNeighbors
-
-        if tileCoord in lNorthTeamsStartCoords.values():
-            for key, value in lNorthTeamsStartCoords.items():
-                if(value == tileCoord and lNorthTeamWeights[key] > 0):
-                    control = key
+        if tile.coord in lNorthTeamsStartCoords.values():
+            for team, teamCoords in lNorthTeamsStartCoords.items():
+                if(teamCoords == tile.coord and lNorthTeamWeights[team] > 0):
+                    tile.control = team
         else:
-            control = tile.attrib.get('control')
+            tile.control = SVGTile.attrib.get('control')
 
-        lNorthTileControlDict[tileCoord] = control
+        lNorthTiles[tile.coord] = tile
 
 
-    BuildMapForGroup(lNorthTileControlDict, lNorthTileNeighborsDict, lNorthTeamWeights)
+    BuildMapForGroup(lNorthTiles, lNorthTeamWeights)
 
         # startTiles = list(filter(lambda x: x.values() != 'base', northTileControlDict))
     # northStartTiles = {key:value for key,value in northTileControlDict.items() if value != 'base'}
